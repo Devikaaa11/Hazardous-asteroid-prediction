@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazardous Asteroid Prediction</title>
+    <link rel="stylesheet" href="../static/css/asteroid.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hazardous Asteroid Prediction</h1>
+        <form action="/predict" method="post">
+
+            <label for="H">Absolute Magnitude(H):</label>
+            <input type="text" id="H" name="H"><br>
+
+            <label for="diameter">Diameter:</label>
+            <input type="text" id="diameter" name="diameter"><br>
+
+            <label for="albedo">Albedo:</label>
+            <input type="text" id="albedo" name="albedo"><br>
+
+            <label for="diameter_sigma">Diameter Sigma:</label>
+            <input type="text" id="diameter_sigma" name="diameter_sigma"><br>
+
+            <label for="epoch">Epoch:</label>
+            <input type="text" id="epoch" name="epoch"><br>
+
+            <label for="e">Eccentricity (e):</label>
+            <input type="text" id="e" name="e"><br>
+
+            <label for="a">Semi-major axis (a):</label>
+            <input type="text" id="a" name="a"><br>
+
+            <label for="q">Perihelion distance (q):</label>
+            <input type="text" id="q" name="q"><br>
+
+            <label for="i">Inclination (i):</label>
+            <input type="text" id="i" name="i"><br>
+
+            <label for="om">Longitude of ascending node (om):</label>
+            <input type="text" id="om" name="om"><br>
+
+            <label for="w">Argument of perihelion (w):</label>
+            <input type="text" id="w" name="w"><br>
+
+            <label for="ma">Mean anomaly (ma):</label>
+            <input type="text" id="ma" name="ma"><br>
+
+            <label for="ad">Aphelion distance (ad):</label>
+            <input type="text" id="ad" name="ad"><br>
+
+            <label for="n">Mean motion (n):</label>
+            <input type="text" id="n" name="n"><br>
+
+            <label for="tp_cal">Time of perihelion passage(Julian Date Format-tp_cal):</label>
+            <input type="text" id="tp_cal" name="tp_cal"><br>
+
+            <label for="per">Orbital period (per):</label>
+            <input type="text" id="per" name="per"><br>
+
+            <label for="moid">Minimum orbit intersection distance (moid):</label>
+            <input type="text" id="moid" name="moid"><br>
+
+            <label for="sigma_a">Sigma (a):</label>
+            <input type="text" id="sigma_a" name="sigma_a"><br>
+
+            <label for="sigma_w">Sigma (w):</label>
+            <input type="text" id="sigma_w" name="sigma_w"><br>
+
+            <label for="sigma_n">Sigma (n):</label>
+            <input type="text" id="sigma_n" name="sigma_n"><br>
+
+            <label for="rms">RMS:</label>
+            <input type="text" id="rms" name="rms"><br>
+
+            <label for="class">Class:</label>
+            <select id="class" name="class">
+                <option value="AMO">AMO</option>
+                <option value="APO">APO</option>
+                <option value="ATE">ATE</option>
+                <option value="IEO">IEO</option>
+                <option value="Other">Other</option>
+            </select><br>
+
+            <label for="neo">NEO:</label>
+            <select id="neo" name="neo">
+                <option value="N">N</option>
+                <option value="Y">Y</option>
+            </select><br>
+
+            <input type="submit" value="Predict">
+            {{prediction_result}}
+
+        
+
+        </form>
+    </div>
+    
+</body>
+</html>
